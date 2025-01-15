@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twin stick shooter</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="">
+    <script src="src/engine.js"></script>
+    <script src="src/input.js"></script>
+    <script src="src/helper.js"></script>
+    <script src="src/game.js"></script>
+    <script src="src/map.js"></script>
+    <script src="src/player.js"></script>
+    <script src="src/polygon.js"></script>
+    <script src="src/camera.js"></script>
+    <script src="src/bar.js"></script>
+    <script src="src/FileSaver.js"></script>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="640" height="480"></canvas>
+
+    <a id = "mapSelector">Selecciona mapa
+        <input type="file" id="mapToSelect">
+    </a>
+
+    <div id = "songSelector">
+
+        <a>Inserte path de la cancion relativo al html index
+            <input type="text" id="songToSelect">
+        </a>
+
+        <a>Inserte losBPM iniciales
+            <input type="text" id="initialBPM">
+            <button type="button" onclick="loadMapCreatorScene()" id="buttonSongToSelect"> select </button>
+        </a>
+
+        <a>o inserte mapa
+            <input type="file" id="mapToSelectEditor">
+        </a>
+
+    </div>
+
+    
+    <a id = "BPMSelector">Escribe los BPM a partir del nuevo nodo
+
+        <input type="text" id="BPMOFNextNode">
+
+    </a>
+
+    <a id = "nameSelector">Escribe el nombre del mapa
+
+        
+        <input type="text" id="nameOfProject">
+        <button type="button" onclick="saveMap()" id="saveSongButton"> select </button>
+
+    </a>
+    <script src="src/mapGetter.js"></script>
+
+    <audio id="laserSound" src="assets/laser.wav" style="display: none;"></audio>
+</body>
+
+</html>
